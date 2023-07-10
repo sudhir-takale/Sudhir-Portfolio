@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&family=Roboto:ital,wght@0,400;1,300;1,400&family=Ubuntu:ital@1&display=swap');
+
+
+/* * {
+    margin: 0;
+    font-family: 'Chivo', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+} */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    background: #121212;
+    overflow-y: overlay;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar:hover {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 100vh;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 100vh;
+}
+
+
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    position: fixed;
+    background: #121212;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.header[data-scroll="in"] {
+    padding: 10px 50px;
+    box-shadow: inset -2px -1px 3px rgba(255, 255, 255, 0.3);
+}
+
+
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 4%;
+    cursor: pointer;
+    color: white;
+}
+
+
+.home {
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.home .text {
+    margin-top: 100px;
+}
+
+.home .text>span {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+
+.home .text h1 {
+    font-size: 70px;
+    line-height: 95px;
+    letter-spacing: 2px;
+    color: rgba(0, 182, 182);
+}
+
+.home .text h3 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+
+.home .text h3 span {
+    color: rgba(0, 182, 182);
+}
+
+.image {
+    width: 400px;
+    height: 520px;
+
+}
+
+.image img {
+    top: 95px;
+    width: 500px;
+    position: absolute;
+    border-bottom: #121212;
+
+}
+
+
+nav {
+    position: relative;
+
+}
+
+nav .bar {
+    position: absolute;
+    right: 50px;
+    font-size: 25px;
+    margin-top: -10px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+nav .bar .close {
+    display: none;
+}
+
+nav .bar.active .open {
+    display: none;
+}
+
+nav .bar.active .close {
+    display: initial;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 30px;
+    /* margin-right: 5%; */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    transition: 0.5s;
+}
+
+nav ul li:hover a {
+    color: red;
+    font-weight: 700;
+    text-decoration-style: dotted;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+
+    transform: rotate(10deg);
+}
+
+
+.coding li {
+    text-align: center;
+    list-style: none;
+}
+
+.namediv p {
+    font-size: 66px;
+    font-weight: bold;
+    color: red;
+}
+
+
+
+.wrapper {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+i {
+    padding: 0px 10px;
+}
+
+.skills {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 2.9rem;
+}
+
+.skill-header {
+    margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+    padding: 1.25rem;
+    margin-left: 4%;
+}
+
+.icon {
+    width: 9.875rem;
+    height: 7.25rem;
+}
+
+
+.icon-card {
+
+    border-radius: 11px;
+    box-shadow: 0 1px 7px .2px whitesmoke;
+    padding: 0px;
+    margin: 10px;
+}
+
+
+
+
+.iam {
+    color: whitesmoke;
+    font-size: 30px;
+    margin-top: -4%;
+    margin-left: 6%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: animate 2s linear infinite;
+
+
+}
