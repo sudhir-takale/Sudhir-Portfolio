@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <title>Sudhir's Portfolio</title>
 </head>
@@ -87,11 +86,6 @@
     .foot {
         flex-wrap: wrap;
     }
-
-
-
-
-
 
     .formdiv {
         width: 100%;
@@ -344,7 +338,7 @@
 
         .main {
             background-image: url("Untitled\ Project.jpg");
-            
+
             background-repeat: no-repeat;
             background-size: cover;
             height: 550px;
@@ -422,22 +416,11 @@
     .info {
         font-size: 18px;
         font-weight: 600;
-
+        margin-left: 3%;
         color: whitesmoke;
         margin-top: 40px;
     }
 
-    .downloadcv {
-        padding: 16px;
-        font-weight: bold;
-        border-radius: 28px;
-        background-color: rgb(24, 169, 65);
-        font-size: 21px;
-        color: black;
-        margin-top: 60%;
-        margin-left: 13%;
-        cursor: pointer;
-    }
 
     .image img:hover {
         transform: scale(1.1);
@@ -450,9 +433,9 @@
 
 
     .firstdiv img {
-        width: 54%;
-        margin-bottom: 3%;
-        margin-top: 3%;
+        width: 189px;
+        margin-top: 7%;
+
     }
 
 
@@ -463,26 +446,88 @@
     .image img:hover {
         filter: grayscale(100%);
     }
+
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 4px;
+        color: white;
+        position: relative;
+
+        transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: red;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        transform: scaleX(1);
+    }
+
+
+
+
+    .navbar-nav .nav-link {
+        color: white;
+    }
+
+
+    .navbar-toggler {
+        background-color: white;
+        color: white;
+    }
+
+    .main {
+        margin-top: -40px;
+    }
+
+    .card-body p {
+        overflow-x: hidden;
+    }
 </style>
 
 <body style="background-color: black">
-    <div class="header">
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact">Download cv</a></li>
-            </ul>
-            <div class="bar">
-                <i class="open fa-solid fa-bars"></i>
-                <i class="close fa-solid fa-xmark"></i>
-            </div>
-        </nav>
-    </div>
 
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" style="color: white;" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white;" href="#aboutme">About</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white;" href="#skill">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: white;" href="#project">Projects</a></li>
+
+                    <li class="nav-item"><a class="nav-link" style="color: white;" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="sudhir's_resume.pdf"
+                            download="sudhir's_resume.pdf">Download cv</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
 
 
     <div class="main">
@@ -495,7 +540,7 @@
                 </p>
 
 
-                <p class="iam">I'm a <span class="ityped" style="color: rgb(244, 20, 210); font-weight: 800;
+                <p class="iam">I'm a <span class="ityped" style="color: rgb(17, 230, 31); font-weight: 800;
                 "></span></p>
                 </p>
 
@@ -510,34 +555,44 @@
     <p style="font-size: 30px;text-align: center;font-weight: bold;color: red;margin-top: 3%;margin-left: 8%;"> ABOUT ME
     </p>
 
-    <div class="about-section">
+    <div class="about-section" id="aboutme">
 
         <div class="firstdiv" style="margin-left: 2%">
-            <img class="images" src="_MG_0529 c.jpg" alt="" />
+            <img class="imagess" src="_MG_0529 c.jpg" alt="" />
         </div>
 
         <div class="secondiv">
 
 
             <p class="info">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
-                unde sapiente blanditiis libero culpa veritatis, quasi et tempore
-                accusantium nulla id illo, non eveniet. Quam tempore laudantium sed
-                iste atque consectetur perferendis, vero id Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Ex provident totam error facere cumque
-                illo, ea nesciunt assumenda impedit libero, placeat hic. Unde est,
-                mollitia iure reiciendis, sequi aut neque minus atque maiores
-                asperiores rerum repellat, tempore nihil incidunt facilis delectus
-                quia. Exercitationem, consequatur? Ullam.!
+                Welcome to my portfolio website! I am a final year student at SKN Sinhgad College of Engineering
+                Pandharpur, currently pursuing a
+                batchelor's degree in Computer
+                Science and Engineering. As an aspiring software engineer, this platform showcases my skills, projects,
+                and achievements
+                throughout my academic journey.
+
+                I have a strong passion for programming and problem-solving, and I constantly seek opportunities to
+                apply my knowledge
+                in real-world scenarios. Throughout my time at Sinhgad College, I have gained expertise in various
+                programming
+                languages, software development methodologies, and computer science fundamentals.
+
+                Within this portfolio, you will find a collection of my projects, demonstrating my ability to develop
+                web applications and software solutions. These projects encompass a range of technologies, including but
+                not
+                limited to
+                Java, Python, CPP, JavaScript, HTML, CSS, Ubuntu(basic) and databases like MySQL and Oracle .
             </p>
-            <p style=" text-align: center;font-weight: bold;font-size: 18px;color: whitesmoke;">This is all about me !
+            <p style=" text-align: center;font-weight: bold;font-size: 18px;color: whitesmoke;">Thank you for visiting
+                my portfolio website, and I hope you enjoy exploring my work!
             </p>
         </div>
 
 
     </div>
 
-    <section class="skills" id="skills">
+    <section class="skills" id="skill">
         <p style="
            margin-bottom: 4%; color: red; font-size: 30px;font-weight: 700;" class="skill-header">My Top Skills</p>
 
@@ -553,12 +608,13 @@
                 <img src="icons8-css3-50.svg" alt="" loading="lazy" class="icon icon-card" />
                 <img src="icons8-javascript-50.svg"" loading=" lazy" class="icon
           icon-card" />
-                <img src="icons8-mysql-logo-50.svg" alt="" loading="lazy" class="icon icon-card" />
+                <img src="4375122_logo_ubuntu_icon (1).png" alt="" loading="lazy" class="icon icon-card" />
                 <img src="icons8-visual-studio-code-2019-50.svg" alt="" loading="lazy" class="icon icon-card" />
             </div>
             <div class="second-set animate__animated animate__pulse">
                 <img src="icons8-github-50.svg" alt="" loading="lazy" class="icon icon-card" />
                 <img src="icons8-git-50.svg" alt="" loading="lazy" class="icon icon-card" />
+
                 <img src="icons8-mysql-logo-50.svg" alt="" loading="lazy" class="icon icon-card" />
                 <img src="icons8-css3-50.svg" alt="" loading="lazy" class="icon icon-card" />
             </div>
@@ -569,18 +625,18 @@
     </p>
 
 
-    <div class="cards-wrapper mt-4">
+    <div class="cards-wrapper mt-4" id="project">
         <div class="card">
             <div class="card-img-wrapper">
                 <img src="https://media.istockphoto.com/id/1370678625/photo/neon-rainbow-watercolor-banner-background-on-black-pure-neon-watercolor-colors-creative-paint.jpg?b=1&amp;s=170667a&amp;w=0&amp;k=20&amp;c=Wn6mTKjzMOQXYbFP0IFFU4QIvbBd1UD4WVyhgrStEtg="
                     class="card-img-top" alt="..." />
             </div>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="https://github.com/sudhir-takale" target="_blank" class="btn btn-primary">View Project</a>
+                <h5 class="card-title">GramVikas Online Portal</h5>
+                <p class="card-text">Gramvikas Online Portal is a web platform that connects Gramvikas organization with
+                    stakeholders.
+                    <a href="https://github.com/sudhir-takale/gramchaitanya-online-portal.git" target="_blank"
+                        class="btn btn-primary">View Project</a>
             </div>
         </div>
         <div class="card">
@@ -589,11 +645,11 @@
                     class="card-img-top" alt="..." />
             </div>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="https://github.com/sudhir-takale" target="_blank" class="btn btn-primary">View Project</a>
+                <h5 class="card-title">Desktop Assistant</h5>
+                <p class="card-text">Developed a Desktop Assistant in python.Which is able to perform basic task.
+                </p>
+                <a href="https://github.com/sudhir-takale/Desktop-assistance-in-python" target="_blank"
+                    class="btn btn-primary">View Project</a>
             </div>
         </div>
         <div class="card">
@@ -602,11 +658,11 @@
                     class="card-img-top" alt="..." />
             </div>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="https://github.com/sudhir-takale" target="_blank" class="btn btn-primary">View Project</a>
+                <h5 class="card-title">Amazon Clone</h5>
+                <p class="card-text">
+                    The Amazon Clone Website is a replica of the popular e-commerce platform, Amazon. </p>
+                <a href="https://github.com/sudhir-takale/amazon-clone" target="_blank" class="btn btn-primary">View
+                    Project</a>
             </div>
         </div>
         <div class="card">
@@ -615,11 +671,10 @@
                     class="card-img-top" alt="..." />
             </div>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="https://github.com/sudhir-takale" target="_blank" class="btn btn-primary">View Project</a>
+                <h5 class="card-title">Peer to Peer tutor Application</h5>
+                <p class="card-text">Peer tutoring is a powerful educational strategy that promotes collaboration and learning among students. </p>
+                <a href="https://github.com/sudhir-takale/hackathon-project2k223" target="_blank"
+                    class="btn btn-primary">View Project</a>
             </div>
         </div>
         <!-- Add more card elements as needed -->
@@ -630,7 +685,7 @@
     <div class="foot d-flex mt-5 justify-content-evenly">
         <div class="coding">
 
-            <div class="contact-me">
+            <div class="contact-me" id="contact">
                 <p class="connect-text">Connect With Me</p>
                 <ul>
                     <li>Gmail - <a href="mailto:sudhirtakale99@gmail.com">sudhirtakale99@gmail.com</a></li>
@@ -652,21 +707,23 @@
             </div>
         </div>
 
-        <form class="formdiv" method="post" action="insertdata.js">
+        <form class="formdiv" method="post" action="insertdata.php">
             <p class="query-text">Have Any Query?</p>
             <div class="form-group">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" />
+                <input type="email" name="email" class="form-control" id="email" placeholder="abc@gmail.com"
+                    autocomplete="off" />
             </div>
             <div class="form-group">
                 <label for="subject" class="form-label">Enter subject</label>
-                <input type="text" class="form-control" id="subject" placeholder="Add subject" />
+                <input type="text" name="subject" class="form-control" id="subject" placeholder="Add subject"
+                    autocomplete="off" />
             </div>
             <div class="form-group">
                 <label for="message" class="form-label">Enter message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+                <textarea class="form-control" name="message" id="message" rows="3" autocomplete="off"></textarea>
             </div>
-            <div class="text-center">
+            <div class="text-center mt-4">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
@@ -697,6 +754,8 @@
 
 
     <script src="https://unpkg.com/ityped@0.0.10"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
@@ -712,8 +771,6 @@
 
             loop: true
         })
-
-
 
 
 
@@ -775,9 +832,7 @@
             });
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+
 
 
 
